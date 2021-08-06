@@ -1,0 +1,23 @@
+<h1>Wish Homepage </h1>
+<div>
+<%= link_to "Add", new_wish_path, class: "btn btn-primary" %>
+</div><br/>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Wish Name</th>
+      <th>Status</th>
+      <tr>
+  </thead>
+  <tbody>
+ 
+<% @wishes.each do |wish| %>
+    <tr>
+      <td>
+        <%= wish.name %></td>
+      <td>
+      <%= wish.status == true ? "granted" : "ungranted" %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

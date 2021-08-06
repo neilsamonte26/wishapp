@@ -1,0 +1,14 @@
+<h1> Add Wish </h1>
+
+
+<%= form_for @wish do |w| %>
+  <div>
+  <%= w.text_field :name, placeholder: "wish", required: true %>
+  </div>
+  <div>
+    <%= w.check_box :status %>  Grant?
+  </div>
+  <div>
+    <%= w.submit class: "btn btn-primary" %>
+  </div>
+<% end %>
